@@ -22,3 +22,20 @@ g.send(0)
 print( next(g) )
 print( next(g) )
 print( next(g) )
+
+
+#初週分の余白を表示
+print('     '* w, end='')
+
+#日付を順番に表示
+for day in range(d) :
+    if (w % 7 == 0) and (w >= 7):
+        print()
+    print('{:5d}'.format(day+1), end ='')
+    w += 1
+    
+#プログラムの実行
+year = 2026
+month = 2
+days = getMonthDays(year, month)
+printCalendar(year, month, days)
